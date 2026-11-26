@@ -4,8 +4,8 @@ const User =  require('../models/User')
 const Product =  require('../models/Product')
 const Order =  require('../models/Order')
 
-Category.hasMany(Product, {foreignKey: 'categoriyId', as: 'products'});
-Product.belongsTo(Category, {foreignKey: 'categoriyId', as: 'category'});
+Category.hasMany(Product, {foreignKey: 'categoryId', as: 'products'});
+Product.belongsTo(Category, {foreignKey: 'categoryId', as: 'category'});
 
 User.hasMany(Order, {foreignKey: 'userId', as: 'orders'});
 Order.belongsTo(User, {foreignKey: 'userId', as: 'user'});
